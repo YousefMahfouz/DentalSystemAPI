@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/VW4u6rjvDv3IjmiiSOPS30f615lLUCkWtMo8c4TJDxXnuUPReBcohWPPjqpxViWjdHWWm5yVIzkgiNUhWNCkg==",
+  "dgSpecHash": "7Kyv4axNlrihfHtieFKKyJQ08em5YFFFpOk+Gei5kLa09gJGp2Dy8n1G8NNjgb9h7mvLXNyCqEYTEd7TBXp+Tw==",
   "success": true,
   "projectFilePath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\DentialSystem.Infrastracture.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Microsoft\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Microsoft\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\erikej.entityframeworkcore.sqlserver.dateonlytimeonly\\7.0.5\\erikej.entityframeworkcore.sqlserver.dateonlytimeonly.7.0.5.nupkg.sha512",
@@ -11,7 +13,7 @@
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.0\\microsoft.aspnetcore.cryptography.keyderivation.7.0.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.data.sqlclient\\5.1.1\\microsoft.data.sqlclient.5.1.1.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.1.0\\microsoft.data.sqlclient.sni.runtime.5.1.0.nupkg.sha512",
     "C:\\Users\\Microsoft\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.10\\microsoft.entityframeworkcore.7.0.10.nupkg.sha512",
