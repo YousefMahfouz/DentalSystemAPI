@@ -1,0 +1,273 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\DentialSystem.Infrastracture.csproj": {}
+  },
+  "projects": {
+    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\DentialSystem.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\DentialSystem.Application.csproj",
+        "projectName": "DentialSystem.Application",
+        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\DentialSystem.Application.csproj",
+        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj",
+        "projectName": "DentialSystem.Context",
+        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj",
+        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
+                "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "ErikEJ.EntityFrameworkCore.SqlServer.DateOnlyTimeOnly": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[2.0.0-preview1-final, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
+        "projectName": "DentialSystem.Domain",
+        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\DentialSystem.Infrastracture.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\DentialSystem.Infrastracture.csproj",
+        "projectName": "DentialSystem.Infrastracture",
+        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\DentialSystem.Infrastracture.csproj",
+        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Infrastracture\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\DentialSystem.Application.csproj": {
+                "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Application\\DentialSystem.Application.csproj"
+              },
+              "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj": {
+                "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

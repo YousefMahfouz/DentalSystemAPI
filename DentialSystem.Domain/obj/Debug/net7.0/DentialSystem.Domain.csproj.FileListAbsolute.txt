@@ -1,0 +1,12 @@
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.deps.json
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.dll
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.pdb
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.csproj.AssemblyReference.cache
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.AssemblyInfoInputs.cache
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.AssemblyInfo.cs
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.csproj.CoreCompileInputs.cache
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.dll
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\refint\DentialSystem.Domain.dll
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.pdb
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\ref\DentialSystem.Domain.dll
