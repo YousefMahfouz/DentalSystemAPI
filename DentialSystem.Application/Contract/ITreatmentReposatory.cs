@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DentialSystem.Domain;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DentialSystem.Application.Contract
 {
-    public interface ITreatmentReposatory
+    public interface ITreatmentReposatory:IRepository<Treatment,int>
     {
     }
 }

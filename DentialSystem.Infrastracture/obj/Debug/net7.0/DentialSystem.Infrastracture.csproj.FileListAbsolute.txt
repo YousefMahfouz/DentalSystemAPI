@@ -17,3 +17,5 @@ E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\obj\Debug\n
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\obj\Debug\net7.0\refint\DentialSystem.Infrastracture.dll
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\obj\Debug\net7.0\DentialSystem.Infrastracture.pdb
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\obj\Debug\net7.0\ref\DentialSystem.Infrastracture.dll
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\bin\Debug\net7.0\DentialSystem.DTO.dll
+E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Infrastracture\bin\Debug\net7.0\DentialSystem.DTO.pdb

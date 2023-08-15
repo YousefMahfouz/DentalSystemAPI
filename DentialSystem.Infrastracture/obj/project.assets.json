@@ -1154,7 +1154,9 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1"
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
+          "DentialSystem.DTO": "1.0.0",
+          "DentialSystem.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DentialSystem.Application.dll": {}
@@ -1192,6 +1194,16 @@
         },
         "runtime": {
           "bin/placeholder/DentialSystem.Domain.dll": {}
+        }
+      },
+      "DentialSystem.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/DentialSystem.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DentialSystem.DTO.dll": {}
         }
       }
     }
@@ -3175,6 +3187,11 @@
       "type": "project",
       "path": "../DentialSystem.Domain/DentialSystem.Domain.csproj",
       "msbuildProject": "../DentialSystem.Domain/DentialSystem.Domain.csproj"
+    },
+    "DentialSystem.DTO/1.0.0": {
+      "type": "project",
+      "path": "../DentialSystem.DTO/DentialSystem.DTO.csproj",
+      "msbuildProject": "../DentialSystem.DTO/DentialSystem.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
