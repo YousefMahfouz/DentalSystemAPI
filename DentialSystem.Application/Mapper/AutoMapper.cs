@@ -14,7 +14,14 @@ namespace DentialSystem.Application.Mapper
         public AutoMapper()
         {
             CreateMap<Treatment, GetTreatmentDTO>().ReverseMap();
+<<<<<<< HEAD
             CreateMap<Appointment, AppointmentDTO>().ReverseMap();
+=======
+            CreateMap<Paitant, paitantRegisterDTO>().ReverseMap();
+            CreateMap<Paitant, PaitantLoginDTO>().ReverseMap();
+
+
+>>>>>>> 6663d09e898dfc72bb86ffc46a3db57430a36c9b
 
         }
 
