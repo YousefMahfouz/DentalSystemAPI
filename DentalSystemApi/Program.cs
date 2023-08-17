@@ -1,6 +1,7 @@
 
 using DentialSystem.Application.Contract;
 using DentialSystem.Application.Services;
+using DentialSystem.Application.Services.AppointmentService;
 using DentialSystem.Context;
 using DentialSystem.Infrastracture;
 using Microsoft.AspNetCore.Identity;
@@ -24,6 +25,8 @@ namespace DentalSystemApi
             builder.Services.AddScoped<IPaitantTreatmentServices, PaitantTreatmentServices>();
             builder.Services.AddScoped<ITreatmentReposatory, TreatmentReposatory>();
             builder.Services.AddScoped<ITreatmentServices, TreatmentServices>();
+            builder.Services.AddScoped<IAppointmentReposatory, AppointmentReposatory>();
+            builder.Services.AddScoped<IAppointmentServices, AppointmentServices>();
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             builder.Services.AddDbContext<ApplicationContext>(options =>
             {

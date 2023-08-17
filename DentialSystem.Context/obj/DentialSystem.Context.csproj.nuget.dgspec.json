@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj": {}
+    "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Context\\DentialSystem.Context.csproj": {}
   },
   "projects": {
-    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj": {
+    "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Context\\DentialSystem.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj",
+        "projectUniqueName": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Context\\DentialSystem.Context.csproj",
         "projectName": "DentialSystem.Context",
-        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\DentialSystem.Context.csproj",
-        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Context\\obj\\",
+        "projectPath": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Context\\DentialSystem.Context.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Context\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
-                "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj"
+              "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
+                "projectPath": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\DentialSystem.Domain.csproj"
               }
             }
           }
@@ -91,17 +95,21 @@
         }
       }
     },
-    "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
+    "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
+        "projectUniqueName": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
         "projectName": "DentialSystem.Domain",
-        "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
-        "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
-        "outputPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\obj\\",
+        "projectPath": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\DentialSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\dentalsystem\\DentalSystemAPI\\DentialSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
