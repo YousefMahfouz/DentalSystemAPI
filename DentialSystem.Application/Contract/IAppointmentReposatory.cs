@@ -9,8 +9,10 @@ namespace DentialSystem.Application.Contract
 {
     public interface IAppointmentReposatory:IRepository<Appointment,int>
     {
-        public Task< List<Appointment>> GetAppointmentsForDate(DateOnly date);
-        public Task<List<Ranking> >GetUsedRankingsForDate(DateOnly date);
+        bool HasAppointmentAtSameTime(Appointment appointment);
+        bool IsDayFull(DateOnly date);
+        bool HasPatientWithRank(Appointment appointment);
+       
 
     }
 }

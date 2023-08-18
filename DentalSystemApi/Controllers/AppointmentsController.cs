@@ -18,7 +18,7 @@ namespace DentalSystemApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<AppointmentDTO>> CreateAppointment(AppointmentDTO appointmentDto)
+        public async Task<ActionResult<AppointmentDTO>> CreateAppointment([FromBody] AppointmentDTO appointmentDto)
         {
             try
             {

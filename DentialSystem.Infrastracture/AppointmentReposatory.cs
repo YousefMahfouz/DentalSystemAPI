@@ -9,28 +9,33 @@ using System.Threading.Tasks;
 
 namespace DentialSystem.Infrastracture
 {
-    public class AppointmentReposatory : Reposatory<Appointment, int>,IAppointmentReposatory
+    public class AppointmentReposatory : Reposatory<Appointment,int>,IAppointmentReposatory
     {
-        private readonly List<Appointment> _appointments = new List<Appointment>();
         public AppointmentReposatory(ApplicationContext context) : base(context)
         {
         }
+        private readonly List<Appointment> _appointments = new List<Appointment>();
 
-        public async Task<List<Appointment>> GetAppointmentsForDate(DateOnly date)
+        public bool HasAppointmentAtSameTime(Appointment appointment)
         {
-            return  _appointments.Where(a => a.date == date).ToList();
+            return _appointments.Any(a =>
+                a.date == appointment.date && a.time == appointment.time && a.Id != appointment.Id);
         }
-        public async Task< List<Ranking> >GetUsedRankingsForDate(DateOnly date)
+
+        public bool IsDayFull(DateOnly date)
         {
-            return await Task.Run(() =>
-            {
-                return _appointments
-                    .Where(a => a.date == date)
-                    .Select(a => a.ranking)
-                    .ToList();
-            });
+            int maxAppointmentsPerDay = 8;
+
+            return _appointments.Count(a => a.date == date) >= maxAppointmentsPerDay;
+        }
+
+        public bool HasPatientWithRank(Appointment appointment)
+        {
+            return _appointments.Any(a =>
+                a.PaitantId == appointment.PaitantId && a.date == appointment.date && a.Id != appointment.Id);
         }
 
        
-    }
+
+    } 
 }

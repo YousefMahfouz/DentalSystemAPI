@@ -23,50 +23,8 @@ namespace DentialSystem.Application.Services.AppointmentService
 
        
 
-        public async Task<AppointmentDTO> CreateAppointment(AppointmentDTO appointmentDto)
-        {
-            var appointment = _mapper.Map<Appointment>(appointmentDto);
-
-            if (appointment.PaitantId == null)
-            {
-                throw new Exception("The patient ID cannot be null.");
-            }
-
-            if (await CanBookAppointment(appointment.date, appointment.time, appointment.PaitantId))
-            {
-                var createdAppointment = await _appointmentReposatory.CreateAsync(appointment);
-
-                var createdAppointmentDto = _mapper.Map<AppointmentDTO>(createdAppointment);
-                await _appointmentReposatory.SaveChanges();
-                return createdAppointmentDto;
-            }
-            else
-            {
-                throw new Exception("The selected appointment day is already fully booked ");
-            }
-        }
-
-        public async Task<bool> CanBookAppointment(DateOnly date, TimeOnly time, string patientId)
-        {
-            var existingAppointments = await _appointmentReposatory.GetAppointmentsForDate(date);
-
-            bool slotsAvailable = existingAppointments.Count < 8;
-
-            bool patientHasAppointment = existingAppointments.Any(a =>
-                a.PaitantId == patientId &&
-                a.date == date &&
-                a.time == time
-            );
-
-            bool sameHourAndDay = existingAppointments.Any(a =>
-                a.date == date &&
-                a.time == time &&
-                a.PaitantId != patientId 
-            );
-
-            return slotsAvailable && !patientHasAppointment && !sameHourAndDay;
-        }
-
+       
+     
 
         public async Task<AppointmentDTO> UpdateAppointment(int id, AppointmentDTO appointmentDto)
         {
@@ -101,6 +59,33 @@ namespace DentialSystem.Application.Services.AppointmentService
             var appointment = await _appointmentReposatory.GetByIdAsync(id);
             var appointmentmapped = _mapper.Map<AppointmentDTO>(appointment);
             return appointmentmapped;
+        }
+
+        public async Task<AppointmentDTO> CreateAppointment(AppointmentDTO appointmentDto)
+        {
+            var appointment = _mapper.Map<Appointment>(appointmentDto);
+
+            if (_appointmentReposatory.HasAppointmentAtSameTime(appointment))
+            {
+                throw new Exception("Patient already has an appointment at this time.");
+            }
+
+            if (_appointmentReposatory.IsDayFull(appointment.date))
+            {
+                throw new Exception("The day is already full.");
+            }
+
+            if (_appointmentReposatory.HasPatientWithRank(appointment))
+            {
+                throw new Exception("Another patient has already booked with this rank.");
+            }
+
+            var createdAppointment = _appointmentReposatory.CreateAsync(appointment);
+            await _appointmentReposatory.SaveChanges();
+
+            var createdAppointmentDTO = _mapper.Map<AppointmentDTO>(createdAppointment);
+
+            return createdAppointmentDTO;
         }
     }
 }
