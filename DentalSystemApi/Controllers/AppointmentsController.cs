@@ -3,6 +3,7 @@ using DentialSystem.Domain;
 using DentialSystem.DTO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 
 namespace DentalSystemApi.Controllers
 {
@@ -30,14 +31,16 @@ namespace DentalSystemApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-       
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAppointment(int id, [FromBody] AppointmentDTO appointmentDto)
+
+        [HttpPut]
+        [Route("UpdateAppointment/{id}")]
+        
+        public async Task<IActionResult> UpdateAppointment(int id,  AppointmentDTO appointmentDto)
         {
-            if (id != appointmentDto.Id)
-            {
-                return BadRequest("ID mismatch between route parameter and appointment data.");
-            }
+            //if (id != appointmentDto.Id)
+            //{
+            //    return BadRequest("ID mismatch between route parameter and appointment data.");
+            //}
 
             try
             {
@@ -50,7 +53,7 @@ namespace DentalSystemApi.Controllers
             }
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("DeleteAppointment/{id}")]
         public async Task<IActionResult> DeleteAppointment(int id)
         {
             try
@@ -73,11 +76,22 @@ namespace DentalSystemApi.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        [Route("GetById/{id}")]
+        public async Task<IActionResult> GetById(string id)
         {
             var property = await _appointmentServices.GetByIdAsync(id);
             return Ok(property);
         }
+        [HttpGet]
+        [Route("GetAllAppointmentByPaitantId/{id}")]
+
+        public async Task<IActionResult> GetAllAppointmentByPaitantId(string id)
+        {
+            var AllApointment = await _appointmentServices.GetAll(id);
+            return Ok(AllApointment);
+        }
+
+
+
     }
 }

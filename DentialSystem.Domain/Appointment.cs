@@ -31,7 +31,7 @@ namespace DentialSystem.Domain
 
         public Paitant? Paitant { get; set; }
 
-
+        public Boolean IsCompleted { get; set; }    
 
 
     }
