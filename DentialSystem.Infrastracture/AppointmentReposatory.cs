@@ -1,6 +1,7 @@
 ﻿using DentialSystem.Application.Contract;
 using DentialSystem.Context;
 using DentialSystem.Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,31 +12,71 @@ namespace DentialSystem.Infrastracture
 {
     public class AppointmentReposatory : Reposatory<Appointment,int>,IAppointmentReposatory
     {
+        private readonly ApplicationContext _context;
+
         public AppointmentReposatory(ApplicationContext context) : base(context)
         {
+            _context = context;
         }
-        private readonly List<Appointment> _appointments = new List<Appointment>();
-
-        public bool HasAppointmentAtSameTime(Appointment appointment)
+          
+        public async Task< bool> HasAppointmentAtSameTime( DateOnly date,TimeOnly time )
         {
-            return _appointments.Any(a =>
-                a.date == appointment.date && a.time == appointment.time && a.Id != appointment.Id);
+            var sametime = await _context.Appointments.FirstOrDefaultAsync(a =>
+                 a.date == date && a.time == time);
+            if (sametime != null)
+            {
+                return  true;
+            }
+            return false;
         }
 
-        public bool IsDayFull(DateOnly date)
+        public async Task< bool> IsDayFull(DateOnly date)
         {
             int maxAppointmentsPerDay = 8;
 
-            return _appointments.Count(a => a.date == date) >= maxAppointmentsPerDay;
+           // var count = await  _context.Appointments.CountAsync(a => a.date == date);
+            
+                if ((await GetRanking( date) >= maxAppointmentsPerDay))
+                {
+                   return true;
+                }
+                return false; 
+            
+           
         }
 
-        public bool HasPatientWithRank(Appointment appointment)
+        public async Task< bool> HasPatientWithRank(string patiantId, DateOnly day)
         {
-            return _appointments.Any(a =>
-                a.PaitantId == appointment.PaitantId && a.date == appointment.date && a.Id != appointment.Id);
+            var withrank= await _context.Appointments.FirstOrDefaultAsync(a =>
+                a.PaitantId == patiantId && a.date==day);
+            if (withrank != null) { 
+                return true;
+            }
+            return false;
         }
 
-       
+        public async Task<int> GetRanking(DateOnly date)
+        {
+            var lastAppointment = await _context.Appointments
+           .Where(a => a.date == date) // Replace with your condition
+           .OrderByDescending(a => a.Id) // Assuming you have a DateTime property for the appointment date
+           .FirstOrDefaultAsync();
+            if(lastAppointment != null) { 
+            return (int)lastAppointment.ranking;}
+            else { return 0; }  
+        }
 
+        public async Task<Appointment> GetByIdAsync(string paitantId)
+        {
+            return await _context.Appointments.FirstOrDefaultAsync(p => p.PaitantId == paitantId && p.IsCompleted==false);
+        }
+
+        public async Task<List<Appointment>> GetALLAppointmentAsync(string paitantId)
+        {
+           return  await( _context.Appointments.Where(p => p.PaitantId == paitantId).ToListAsync());
+            
+        }
+
+        
     } 
 }

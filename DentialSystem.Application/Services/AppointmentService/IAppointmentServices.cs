@@ -12,8 +12,9 @@ namespace DentialSystem.Application.Services.AppointmentService
     {
        public Task<AppointmentDTO> CreateAppointment(AppointmentDTO appointmentDto);
         public Task<AppointmentDTO> UpdateAppointment(int id, AppointmentDTO appointment);
-        public Task<AppointmentDTO> GetByIdAsync(int id);
+        public Task<AppointmentDTO> GetByIdAsync(string paitantId);
        public Task< bool> DeleteAppointment(int id);
-       
+        public Task<List<AppointmentDTO>> GetAll(string paitantId);
+
     }
 }

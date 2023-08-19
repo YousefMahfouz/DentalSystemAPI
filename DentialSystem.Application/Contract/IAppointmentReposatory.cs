@@ -1,4 +1,5 @@
 ﻿using DentialSystem.Domain;
+using DentialSystem.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,15 @@ namespace DentialSystem.Application.Contract
 {
     public interface IAppointmentReposatory:IRepository<Appointment,int>
     {
-        bool HasAppointmentAtSameTime(Appointment appointment);
-        bool IsDayFull(DateOnly date);
-        bool HasPatientWithRank(Appointment appointment);
+       public Task<  bool> HasAppointmentAtSameTime(DateOnly date, TimeOnly time);
+
+        public Task<bool> IsDayFull(DateOnly date);
+        public Task<bool> HasPatientWithRank(string patiantId, DateOnly day);
        
+        public Task<int> GetRanking(DateOnly date);
+        public Task<Appointment> GetByIdAsync(string paitantId);
+        public Task<List<Appointment>> GetALLAppointmentAsync(string paitantId);
+
 
     }
 }

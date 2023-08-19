@@ -21,71 +21,91 @@ namespace DentialSystem.Application.Services.AppointmentService
             _mapper = mapper;
         }
 
-       
 
-       
-     
+
+
+
 
         public async Task<AppointmentDTO> UpdateAppointment(int id, AppointmentDTO appointmentDto)
         {
             {
-                if (appointmentDto.Id == 0)
-                {
-                    await CreateAppointment(appointmentDto);
-                    return appointmentDto;
-                }
-                else
-                {
-                    var model = _mapper.Map<Appointment>(appointmentDto);
-                    await _appointmentReposatory.UpdateAsync(model, id);
-                     await  _appointmentReposatory.SaveChanges();
 
-                    return appointmentDto;
-                }
+
+                var model = _mapper.Map<Appointment>(appointmentDto);
+                await _appointmentReposatory.UpdateAsync(model, id);
+                await _appointmentReposatory.SaveChanges();
+
+                return appointmentDto;
+
             }
 
 
         }
 
-        public async Task< bool> DeleteAppointment(int id)
+        public async Task<bool> DeleteAppointment(int id)
         {
             await _appointmentReposatory.DeleteAsync(id);
-            await _appointmentReposatory.SaveChanges();    
+            await _appointmentReposatory.SaveChanges();
             return true;
         }
 
-        public async Task<AppointmentDTO> GetByIdAsync(int id)
-        {
-            var appointment = await _appointmentReposatory.GetByIdAsync(id);
-            var appointmentmapped = _mapper.Map<AppointmentDTO>(appointment);
-            return appointmentmapped;
-        }
+        //public async Task<AppointmentDTO> GetByIdAsync(int id)
+        //{
+        //    var appointment = await _appointmentReposatory.GetByIdAsync(id);
+        //    var appointmentmapped = _mapper.Map<AppointmentDTO>(appointment);
+        //    return appointmentmapped;
+        //}
 
         public async Task<AppointmentDTO> CreateAppointment(AppointmentDTO appointmentDto)
         {
             var appointment = _mapper.Map<Appointment>(appointmentDto);
-
-            if (_appointmentReposatory.HasAppointmentAtSameTime(appointment))
+            if (await _appointmentReposatory.HasAppointmentAtSameTime(appointment.date, appointment.time) ||
+            await _appointmentReposatory.IsDayFull(appointment.date) ||
+             await _appointmentReposatory.HasPatientWithRank(appointment.PaitantId, appointment.date))
             {
-                throw new Exception("Patient already has an appointment at this time.");
+                throw new Exception("An appointment is already booked at the same time.");
+            }
+            //if (_appointmentReposatory.HasAppointmentAtSameTime(appointment))
+            //{
+            //    throw new Exception("An appointment is already booked at the same time.");
+            //}
+            //else if (_appointmentReposatory.IsDayFull(appointment.date))
+            //{
+            //    throw new Exception("The day is already full.");
+            //}
+            //else if (_appointmentReposatory.HasPatientWithRank(appointment.PaitantId, appointment.date))
+            //{
+            //    throw new Exception("Another patient has already booked with this rank.");
+            //}
+            else
+            {
+                {
+                    int rankingValue = await _appointmentReposatory.GetRanking(appointment.date) +1;
+                    appointment.ranking = (Ranking)rankingValue; 
+                    var createdAppointment = await _appointmentReposatory.CreateAsync(appointment);
+                    
+                    await _appointmentReposatory.SaveChanges();
+
+                    return _mapper.Map<AppointmentDTO>(createdAppointment);
+                }
             }
 
-            if (_appointmentReposatory.IsDayFull(appointment.date))
-            {
-                throw new Exception("The day is already full.");
-            }
+            
 
-            if (_appointmentReposatory.HasPatientWithRank(appointment))
-            {
-                throw new Exception("Another patient has already booked with this rank.");
-            }
+        }
 
-            var createdAppointment = _appointmentReposatory.CreateAsync(appointment);
-            await _appointmentReposatory.SaveChanges();
+        public async Task<AppointmentDTO> GetByIdAsync(string paitantId)
+        {
+            var appointment = await _appointmentReposatory.GetByIdAsync(paitantId);
+            var appointmentmapped = _mapper.Map<AppointmentDTO>(appointment);
+            return appointmentmapped;
+        }
 
-            var createdAppointmentDTO = _mapper.Map<AppointmentDTO>(createdAppointment);
-
-            return createdAppointmentDTO;
+        public async Task<List<AppointmentDTO> >GetAll(string paitantId)
+        {
+            var appointment = await _appointmentReposatory.GetALLAppointmentAsync(paitantId);
+            var appointmentmapped = _mapper.Map<List<AppointmentDTO>>(appointment);
+            return appointmentmapped;
         }
     }
 }
