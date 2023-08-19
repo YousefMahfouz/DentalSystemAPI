@@ -370,6 +370,9 @@
       "DentialSystem.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DentialSystem.Domain": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/DentialSystem.DTO.dll": {}
         },

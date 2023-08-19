@@ -10,3 +10,15 @@ E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\De
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\refint\DentialSystem.Domain.dll
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.pdb
 E:\ITI\Asp.net\codes_test\DentialSystem\DentialSystem.Domain\obj\Debug\net7.0\ref\DentialSystem.Domain.dll
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.deps.json
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.dll
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\bin\Debug\net7.0\DentialSystem.Domain.pdb
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.csproj.AssemblyReference.cache
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.AssemblyInfoInputs.cache
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.AssemblyInfo.cs
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.csproj.CoreCompileInputs.cache
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.dll
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\refint\DentialSystem.Domain.dll
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\DentialSystem.Domain.pdb
+E:\dentalsystem\DentalSystemAPI\DentialSystem.Domain\obj\Debug\net7.0\ref\DentialSystem.Domain.dll

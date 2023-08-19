@@ -247,7 +247,11 @@
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj": {
+                "projectPath": "E:\\ITI\\Asp.net\\codes_test\\DentialSystem\\DentialSystem.Domain\\DentialSystem.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

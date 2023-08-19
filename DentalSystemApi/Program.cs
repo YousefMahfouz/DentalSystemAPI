@@ -1,6 +1,7 @@
 
 using DentialSystem.Application.Contract;
 using DentialSystem.Application.Services;
+using DentialSystem.Application.Services.AppointmentService;
 using DentialSystem.Context;
 using DentialSystem.Domain;
 using DentialSystem.Infrastracture;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using System.Text.Json.Serialization;
+using DentialSystem.Application.Services.DentalService;
 
 namespace DentalSystemApi
 {
@@ -42,6 +44,11 @@ namespace DentalSystemApi
             builder.Services.AddScoped<IPaitantTreatmentServices, PaitantTreatmentServices>();
             builder.Services.AddScoped<ITreatmentReposatory, TreatmentReposatory>();
             builder.Services.AddScoped<ITreatmentServices, TreatmentServices>();
+            builder.Services.AddScoped<IAppointmentReposatory, AppointmentReposatory>();
+            builder.Services.AddScoped<IAppointmentServices, AppointmentServices>();
+            builder.Services.AddScoped<IDentalHistoryServices, DentalHistoryServices>();
+            builder.Services.AddScoped<IDentialHistoryReposatory, DentalHistoryReposatory>();
+
             builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("SecretKey").Value);
             builder.Services.AddAuthentication().AddJwtBearer(options =>

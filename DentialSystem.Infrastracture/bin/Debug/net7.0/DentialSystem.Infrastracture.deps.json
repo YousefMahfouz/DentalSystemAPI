@@ -708,6 +708,9 @@
         }
       },
       "DentialSystem.DTO/1.0.0": {
+        "dependencies": {
+          "DentialSystem.Domain": "1.0.0"
+        },
         "runtime": {
           "DentialSystem.DTO.dll": {}
         }

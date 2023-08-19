@@ -27,7 +27,7 @@ namespace DentialSystem.Domain
         public Ranking ranking { get; set; }
         public decimal cost { get; set; }
         [ForeignKey("Paitant")]
-        public String? PaitantId { get; set; }
+        public string? PaitantId { get; set; }
 
         public Paitant? Paitant { get; set; }
 

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DentialSystem.Infrastracture
 {
-    internal class DentalHistoryReposatory : Reposatory<DentialHistory, int>, IDentialHistoryReposatory
+    public class DentalHistoryReposatory : Reposatory<DentialHistory, int>, IDentialHistoryReposatory
     {
         public DentalHistoryReposatory(ApplicationContext context) : base(context)
         {
